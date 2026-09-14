@@ -1,0 +1,97 @@
+<div class="layout">
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <div class="logo-icon">L</div>
+
+      <div>
+        <h2>LogiTrack</h2>
+        <span>Logistics Management</span>
+      </div>
+    </div>
+
+    <nav class="navigation">
+
+      <a
+        routerLink="/dashboard"
+        routerLinkActive="active">
+        <span>📊</span>
+        Dashboard
+      </a>
+
+      <a
+        routerLink="/deliveries"
+        routerLinkActive="active">
+        <span>🚚</span>
+        Deliveries
+      </a>
+
+      <a
+        routerLink="/customers"
+        routerLinkActive="active">
+        <span>👥</span>
+        Customers
+      </a>
+
+      <a
+        routerLink="/drivers"
+        routerLinkActive="active">
+        <span>🧑‍✈️</span>
+        Drivers
+      </a>
+
+      <a
+        routerLink="/vehicles"
+        routerLinkActive="active">
+        <span>🚛</span>
+        Vehicles
+      </a>
+
+      <a
+        routerLink="/payments"
+        routerLinkActive="active">
+        <span>💳</span>
+        Payments
+      </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+      <button
+        type="button"
+        class="logout-button"
+        (click)="logout()">
+        <span>↪</span>
+        Logout
+      </button>
+
+    </div>
+
+  </aside>
+
+  <main class="main-content">
+
+    <header class="topbar">
+
+      <div>
+        <h1>LogiTrack</h1>
+      </div>
+
+      <div class="user-area">
+        <span>{{ user?.firstName }} {{ user?.lastName }}</span>
+        <div class="avatar">{{ (user?.firstName || 'U').charAt(0) }}</div>
+      </div>
+
+    </header>
+
+    <section class="page-content">
+
+      <router-outlet></router-outlet>
+
+    </section>
+
+  </main>
+
+</div>
