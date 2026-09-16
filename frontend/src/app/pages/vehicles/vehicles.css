@@ -1,0 +1,63 @@
+.page {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+.primary-button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.content-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.toolbar {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.toolbar input {
+  width: 300px;
+  max-width: 100%;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 70px;
+  color: #6b7280;
+}
+
+.empty-state div {
+  font-size: 45px;
+}
+
+.empty-state h3 {
+  color: #111827;
+}

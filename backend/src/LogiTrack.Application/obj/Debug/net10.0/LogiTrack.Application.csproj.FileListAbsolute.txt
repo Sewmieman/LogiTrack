@@ -1,0 +1,15 @@
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\bin\Debug\net10.0\LogiTrack.Application.deps.json
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\bin\Debug\net10.0\LogiTrack.Application.dll
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\bin\Debug\net10.0\LogiTrack.Application.pdb
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\bin\Debug\net10.0\LogiTrack.Domain.dll
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\bin\Debug\net10.0\LogiTrack.Domain.pdb
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\LogiTrack.Application.csproj.AssemblyReference.cache
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\LogiTrack.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\LogiTrack.Application.AssemblyInfoInputs.cache
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\LogiTrack.Application.AssemblyInfo.cs
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\LogiTrack.Application.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\LogiTrac.51847042.Up2Date
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\LogiTrack.Application.dll
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\refint\LogiTrack.Application.dll
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\LogiTrack.Application.pdb
+C:\Users\student\Desktop\MyTraining\Logistics and Delivery\LogiTrack\backend\src\LogiTrack.Application\obj\Debug\net10.0\ref\LogiTrack.Application.dll

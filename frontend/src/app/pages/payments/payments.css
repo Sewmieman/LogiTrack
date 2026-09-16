@@ -1,0 +1,55 @@
+.page {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.page-header {
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+.content-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.toolbar {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  gap: 12px;
+}
+
+.toolbar input,
+.toolbar select {
+  padding: 11px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.toolbar input {
+  width: 300px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 70px;
+  color: #6b7280;
+}
+
+.empty-state div {
+  font-size: 45px;
+}
+
+.empty-state h3 {
+  color: #111827;
+}
