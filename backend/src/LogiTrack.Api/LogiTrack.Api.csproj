@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <PackageReference Include="Asp.Versioning.Mvc" Version="10.2.1" />
     <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="10.2.1" />
->>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
@@ -20,11 +17,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Scalar.AspNetCore" Version="2.17.2" />
-<<<<<<< HEAD
-    <PackageReference Include="Asp.Versioning.Mvc" Version="10.0.0" />
-    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="10.0.0" />
-=======
->>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
   </ItemGroup>
 
   <ItemGroup>
@@ -32,8 +24,4 @@
     <ProjectReference Include="..\LogiTrack.Infrastructure\LogiTrack.Infrastructure.csproj" />
   </ItemGroup>
 
-<<<<<<< HEAD
 </Project>
-=======
-</Project>
->>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
