@@ -1,72 +1,102 @@
 using System.Text;
-using LogiTrack.Api;
+
+using Asp.Versioning;
+
 using FluentValidation;
+
+using LogiTrack.Api;
+using LogiTrack.Api.Hubs;
 using LogiTrack.Application.Common.Behaviors;
-using LogiTrack.Application.Notifications;
-using LogiTrack.Infrastructure.Notifications;
 using LogiTrack.Application.Common.Interfaces;
 using LogiTrack.Application.Customers.Commands.CreateCustomer;
-
+using LogiTrack.Application.Notifications;
 using LogiTrack.Infrastructure.Authentication;
 using LogiTrack.Infrastructure.Identity;
+using LogiTrack.Infrastructure.Notifications;
 using LogiTrack.Infrastructure.Persistence;
 
 using MediatR;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Asp.Versioning;
-using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 using Scalar.AspNetCore;
-using LogiTrack.Api.Hubs;
+
+
+// ============================================================
+// CREATE BUILDER
+// ============================================================
 
 var builder = WebApplication.CreateBuilder(args);
 
-// =====================================================
-// Database
-// =====================================================
+
+// ============================================================
+// DATABASE
+// ============================================================
 
 var connectionString =
     builder.Configuration.GetConnectionString("DefaultConnection");
 
+if (string.IsNullOrWhiteSpace(connectionString))
+{
+    throw new InvalidOperationException(
+        "DefaultConnection is missing from appsettings.json.");
+}
+
 builder.Services.AddDbContext<LogiTrackDbContext>(options =>
-    options.UseNpgsql(connectionString));
+{
+    options.UseNpgsql(connectionString);
+});
 
 builder.Services.AddScoped<IApplicationDbContext>(
-    provider => provider.GetRequiredService<LogiTrackDbContext>());
+    provider =>
+        provider.GetRequiredService<LogiTrackDbContext>());
 
-// =====================================================
-// ASP.NET Core Identity
-// =====================================================
+
+// ============================================================
+// ASP.NET CORE IDENTITY
+// ============================================================
 
 builder.Services
     .AddIdentityCore<LogiTrackUser>(options =>
     {
+        // User settings
         options.User.RequireUniqueEmail = true;
 
+        // Password settings
         options.Password.RequiredLength = 8;
         options.Password.RequireDigit = true;
         options.Password.RequireUppercase = true;
         options.Password.RequireLowercase = true;
         options.Password.RequireNonAlphanumeric = true;
+
+        // Lockout settings
         options.Lockout.MaxFailedAccessAttempts = 5;
-        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+        options.Lockout.DefaultLockoutTimeSpan =
+            TimeSpan.FromMinutes(15);
+
         options.Lockout.AllowedForNewUsers = true;
     })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<LogiTrackDbContext>()
     .AddSignInManager();
 
-// =====================================================
-// JWT Authentication
-// =====================================================
 
-var jwtKey = builder.Configuration["Jwt:Key"]
-    ?? throw new InvalidOperationException(
-        "JWT key is missing.");
+// ============================================================
+// JWT AUTHENTICATION
+// ============================================================
+
+var jwtKey =
+    builder.Configuration["Jwt:Key"];
+
+if (string.IsNullOrWhiteSpace(jwtKey))
+{
+    throw new InvalidOperationException(
+        "Jwt:Key is missing from appsettings.json.");
+}
 
 builder.Services
     .AddAuthentication(options =>
@@ -95,113 +125,206 @@ builder.Services
 
                 IssuerSigningKey =
                     new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(jwtKey))
+                        Encoding.UTF8.GetBytes(jwtKey)),
+
+                ClockSkew = TimeSpan.Zero
             };
     });
 
 builder.Services.AddAuthorization();
 
-// TmsApi-inspired API versioning and rate limiting
-builder.Services.AddApiVersioning(options =>
-{
-    options.DefaultApiVersion = new ApiVersion(1, 0);
-    options.AssumeDefaultVersionWhenUnspecified = true;
-    options.ReportApiVersions = true;
-    options.ApiVersionReader = new UrlSegmentApiVersionReader();
-}).AddApiExplorer(options =>
-{
-    options.GroupNameFormat = "'v'VVV";
-    options.SubstituteApiVersionInUrl = true;
-});
+
+// ============================================================
+// OPENAPI / SCALAR
+// ============================================================
+
+builder.Services
+    .AddApiVersioning(options =>
+    {
+        options.DefaultApiVersion =
+            new ApiVersion(1, 0);
+
+        options.AssumeDefaultVersionWhenUnspecified =
+            true;
+
+        options.ReportApiVersions =
+            true;
+
+        options.ApiVersionReader =
+            new UrlSegmentApiVersionReader();
+    })
+    .AddMvc()
+    .AddApiExplorer(options =>
+    {
+        options.GroupNameFormat =
+            "'v'VVV";
+
+        options.SubstituteApiVersionInUrl =
+            true;
+    })
+    .AddOpenApi();
+
+
+// ============================================================
+// RATE LIMITING
+// ============================================================
 
 builder.Services.AddRateLimiter(options =>
 {
-    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
-    options.AddFixedWindowLimiter("writes", limiter =>
-    {
-        limiter.PermitLimit = 30;
-        limiter.Window = TimeSpan.FromMinutes(1);
-        limiter.QueueLimit = 0;
-    });
+    options.RejectionStatusCode =
+        StatusCodes.Status429TooManyRequests;
+
+    options.AddFixedWindowLimiter(
+        "writes",
+        limiter =>
+        {
+            limiter.PermitLimit = 30;
+
+            limiter.Window =
+                TimeSpan.FromMinutes(1);
+
+            limiter.QueueLimit = 0;
+        });
 });
-builder.Services.AddSingleton<IIdempotencyStore, InMemoryIdempotencyStore>();
+
+
+// ============================================================
+// APPLICATION SERVICES
+// ============================================================
+
+builder.Services.AddSingleton<IIdempotencyStore,
+    InMemoryIdempotencyStore>();
+
 builder.Services.AddProblemDetails();
 
-// =====================================================
-// JWT Token Service
-// =====================================================
 
-builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
+// ============================================================
+// JWT TOKEN SERVICE
+// ============================================================
+
+builder.Services.AddScoped<IJwtTokenService,
+    JwtTokenService>();
+
+
+// ============================================================
+// SIGNALR
+// ============================================================
+
 builder.Services.AddSignalR();
-builder.Services.AddSingleton<IDeliveryNotificationService, SignalRDeliveryNotificationService>();
 
-// =====================================================
-// Controllers
-// =====================================================
+builder.Services.AddSingleton<
+    IDeliveryNotificationService,
+    SignalRDeliveryNotificationService>();
+
+
+// ============================================================
+// CONTROLLERS
+// ============================================================
 
 builder.Services.AddControllers(options =>
 {
-    options.Filters.Add<LogiTrack.Api.AuditLogFilter>();
+    options.Filters.Add<
+        LogiTrack.Api.AuditLogFilter>();
 });
 
-// =====================================================
-// MediatR
-// =====================================================
+
+// ============================================================
+// MEDIATR
+// ============================================================
 
 builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssembly(
         typeof(CreateCustomerCommand).Assembly);
 
-    cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));
-    cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
+    cfg.AddOpenBehavior(
+        typeof(LoggingBehavior<,>));
+
+    cfg.AddOpenBehavior(
+        typeof(ValidationBehavior<,>));
 });
 
-// =====================================================
-// FluentValidation
-// =====================================================
+
+// ============================================================
+// FLUENT VALIDATION
+// ============================================================
 
 builder.Services.AddValidatorsFromAssembly(
     typeof(CreateCustomerCommand).Assembly);
 
-// =====================================================
-// OpenAPI / Scalar
-// =====================================================
 
-builder.Services.AddOpenApi();
+// ============================================================
+// OPENAPI
+// ============================================================
+//
+// Do NOT use:
+//     builder.Services.AddOpenApi("v1");
+//     builder.Services.AddOpenApi("v2");
+//
+// when using Asp.Versioning.OpenApi.
+//
+// AddOpenApi() is registered through the API-versioning
+// integration above.
+//
 
-// =====================================================
+// ============================================================
 // CORS
-// =====================================================
+// ============================================================
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("Angular", policy =>
-    {
-        policy
-            .WithOrigins("http://localhost:4200")
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
-    });
+    options.AddPolicy(
+        "Angular",
+        policy =>
+        {
+            policy
+                .WithOrigins(
+                    "http://localhost:4200",
+                    "https://localhost:4200")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+        });
 });
 
-// =====================================================
-// Build Application
-// =====================================================
+
+// ============================================================
+// BUILD APPLICATION
+// ============================================================
 
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
-    await IdentitySeeder.SeedAsync(scope.ServiceProvider);
-}
-// =====================================================
-// Development Tools
-// =====================================================
+    var services = scope.ServiceProvider;
 
-if (app.Environment.IsDevelopment())
+    try
+    {
+        var dbContext =
+            services.GetRequiredService<LogiTrackDbContext>();
+
+        await dbContext.Database.MigrateAsync();
+
+        await IdentitySeeder.SeedAsync(
+            services);
+    }
+    catch (Exception ex)
+    {
+        var logger =
+            services.GetRequiredService<
+                ILogger<Program>>();
+
+        logger.LogError(
+            ex,
+            "An error occurred while migrating/seeding the database.");
+
+        throw;
+    }
+}
+
+   if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.MapOpenApi()
+       .WithDocumentPerVersion();
 
     app.MapScalarApiReference(options =>
     {
@@ -211,14 +334,17 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-// =====================================================
-// Middleware Pipeline
-// =====================================================
+
+// ============================================================
+// ERROR HANDLING
+// ============================================================
 
 app.UseMiddleware<
     LogiTrack.Api.Middleware.ExceptionHandlingMiddleware>();
 
+
 app.UseCors("Angular");
+
 app.UseRateLimiter();
 
 app.UseAuthentication();
@@ -227,14 +353,14 @@ app.UseAuthorization();
 
 app.UseHttpsRedirection();
 
-app.MapHub<LogiTrack.Api.Hubs.DeliveryHub>("/hubs/delivery");
-
-// =====================================================
-// Controllers
-// =====================================================
-
+app.MapHub<LogiTrack.Api.Hubs.DeliveryHub>(
+    "/hubs/delivery");
 app.MapControllers();
-
 app.Run();
+
+
+// ============================================================
+// REQUIRED FOR TEST PROJECTS
+// ============================================================
 
 public partial class Program;
