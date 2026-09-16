@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "k4AzwaF5Kg4=",
   "success": true,
   "projectFilePath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\tests\\LogiTrack.Tests\\LogiTrack.Tests.csproj",
+=======
+  "dgSpecHash": "FUTmtUG8AfI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\tests\\LogiTrack.Tests\\LogiTrack.Tests.csproj",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
   "expectedPackageFiles": [
     "C:\\Users\\student\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\student\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",

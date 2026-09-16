@@ -1,5 +1,9 @@
 using System.Text;
+<<<<<<< HEAD
 using LogiTrack.Api;
+=======
+
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
 using FluentValidation;
 
 using LogiTrack.Application.Common.Behaviors;
@@ -11,19 +15,29 @@ using LogiTrack.Application.Customers.Commands.CreateCustomer;
 using LogiTrack.Infrastructure.Authentication;
 using LogiTrack.Infrastructure.Identity;
 using LogiTrack.Infrastructure.Persistence;
+<<<<<<< HEAD
 
 using MediatR;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Asp.Versioning;
 using Microsoft.AspNetCore.RateLimiting;
+=======
+using Asp.Versioning;
+using MediatR;
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 using Scalar.AspNetCore;
+<<<<<<< HEAD
 using LogiTrack.Api.Hubs;
 using DeliveryHub = LogiTrack.Api.Hubs.DeliveryHub;
+=======
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -103,6 +117,7 @@ builder.Services
 
 builder.Services.AddAuthorization();
 
+<<<<<<< HEAD
 // TmsApi-inspired API versioning and rate limiting
 builder.Services.AddApiVersioning(options =>
 {
@@ -129,6 +144,8 @@ builder.Services.AddRateLimiter(options =>
 builder.Services.AddSingleton<IIdempotencyStore, InMemoryIdempotencyStore>();
 builder.Services.AddProblemDetails();
 
+=======
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
 // =====================================================
 // JWT Token Service
 // =====================================================
@@ -170,8 +187,34 @@ builder.Services.AddValidatorsFromAssembly(
 // OpenAPI / Scalar
 // =====================================================
 
+<<<<<<< HEAD
 builder.Services.AddOpenApi();
 
+=======
+builder.Services.AddOpenApi("v1", options =>
+{
+    options.ShouldInclude = description =>
+        description.GroupName == "v1";
+});
+
+builder.Services.AddOpenApi("v2", options =>
+{
+    options.ShouldInclude = description =>
+        description.GroupName == "v2";
+});
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true;
+    options.ApiVersionReader = new UrlSegmentApiVersionReader();
+})
+.AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
+});
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
 // =====================================================
 // CORS
 // =====================================================
@@ -203,6 +246,7 @@ using (var scope = app.Services.CreateScope())
 
 if (app.Environment.IsDevelopment())
 {
+<<<<<<< HEAD
     app.MapOpenApi();
 
     app.MapScalarApiReference(options =>
@@ -211,6 +255,18 @@ if (app.Environment.IsDevelopment())
             .WithTitle("LogiTrack API")
             .WithTheme(ScalarTheme.Default);
     });
+=======
+   app.MapOpenApi();
+
+app.MapScalarApiReference(options =>
+{
+    options
+        .WithTitle("LogiTrack API")
+        .WithTheme(ScalarTheme.Default)
+        .AddDocument("v1", "API Version 1.0")
+        .AddDocument("v2", "API Version 2.0");
+});
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
 }
 
 // =====================================================
@@ -221,7 +277,10 @@ app.UseMiddleware<
     LogiTrack.Api.Middleware.ExceptionHandlingMiddleware>();
 
 app.UseCors("Angular");
+<<<<<<< HEAD
 app.UseRateLimiter();
+=======
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
 
 app.UseAuthentication();
 

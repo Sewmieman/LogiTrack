@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ITSt3cIrFsk=",
   "success": true,
   "projectFilePath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj",
+=======
+  "dgSpecHash": "wy0NDG3giJY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
   "expectedPackageFiles": [
     "C:\\Users\\student\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\student\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

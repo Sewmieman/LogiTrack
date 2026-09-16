@@ -8,8 +8,13 @@
     ".NETCoreApp,Version=v10.0": {
       "LogiTrack.Api/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "Asp.Versioning.Mvc": "10.0.0",
           "Asp.Versioning.Mvc.ApiExplorer": "10.0.0",
+=======
+          "Asp.Versioning.Mvc": "10.2.1",
+          "Asp.Versioning.Mvc.ApiExplorer": "10.2.1",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "LogiTrack.Application": "1.0.0",
           "LogiTrack.Infrastructure": "1.0.0",
@@ -22,6 +27,7 @@
           "LogiTrack.Api.dll": {}
         }
       },
+<<<<<<< HEAD
       "Asp.Versioning.Abstractions/10.0.0": {
         "runtime": {
           "lib/net10.0/Asp.Versioning.Abstractions.dll": {
@@ -60,6 +66,46 @@
           "lib/net10.0/Asp.Versioning.Mvc.ApiExplorer.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.9607.28167"
+=======
+      "Asp.Versioning.Abstractions/10.2.1": {
+        "runtime": {
+          "lib/net10.0/Asp.Versioning.Abstractions.dll": {
+            "assemblyVersion": "10.2.0.0",
+            "fileVersion": "10.2.9714.15149"
+          }
+        }
+      },
+      "Asp.Versioning.Http/10.2.1": {
+        "dependencies": {
+          "Asp.Versioning.Abstractions": "10.2.1"
+        },
+        "runtime": {
+          "lib/net10.0/Asp.Versioning.Http.dll": {
+            "assemblyVersion": "10.2.0.0",
+            "fileVersion": "10.2.9714.15157"
+          }
+        }
+      },
+      "Asp.Versioning.Mvc/10.2.1": {
+        "dependencies": {
+          "Asp.Versioning.Http": "10.2.1"
+        },
+        "runtime": {
+          "lib/net10.0/Asp.Versioning.Mvc.dll": {
+            "assemblyVersion": "10.2.0.0",
+            "fileVersion": "10.2.9714.15157"
+          }
+        }
+      },
+      "Asp.Versioning.Mvc.ApiExplorer/10.2.1": {
+        "dependencies": {
+          "Asp.Versioning.Mvc": "10.2.1"
+        },
+        "runtime": {
+          "lib/net10.0/Asp.Versioning.Mvc.ApiExplorer.dll": {
+            "assemblyVersion": "10.2.0.0",
+            "fileVersion": "10.2.9714.15157"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
           }
         }
       },
@@ -742,6 +788,7 @@
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< HEAD
     "Asp.Versioning.Abstractions/10.0.0": {
       "type": "package",
       "serviceable": true,
@@ -769,6 +816,35 @@
       "sha512": "sha512-H54UOpRoc4RmhQ4RA2lzDz43a/hAu/JN19Yyy/DNmH4XlRxhemfhifJyh9BaXNJOtGa2Dnu2xEeP4VSiTdUdAg==",
       "path": "asp.versioning.mvc.apiexplorer/10.0.0",
       "hashPath": "asp.versioning.mvc.apiexplorer.10.0.0.nupkg.sha512"
+=======
+    "Asp.Versioning.Abstractions/10.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jMBztsVim+rYVrkNY23dMuOjTGXGQ9+je1xb3i17KgUof7OcBZtMMDduEWoCQ52SpTlYqKsuzgJyUMCMOFCBfg==",
+      "path": "asp.versioning.abstractions/10.2.1",
+      "hashPath": "asp.versioning.abstractions.10.2.1.nupkg.sha512"
+    },
+    "Asp.Versioning.Http/10.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XaVOKS4AV6a6JdFsiuyLkNwU0ilWhUK2U71mBEXJsgi5AGpo24UkfZ4KUhpRGpuMmQNrugS7yxCIscGcnujdFA==",
+      "path": "asp.versioning.http/10.2.1",
+      "hashPath": "asp.versioning.http.10.2.1.nupkg.sha512"
+    },
+    "Asp.Versioning.Mvc/10.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fMzUraYZOAobKQn2PffrgPsULbCWFeWroYRYndPasxPsiQl1+i8x5qYRuMYZAbzDrBnymPUMBxT2gZG2PwbkcQ==",
+      "path": "asp.versioning.mvc/10.2.1",
+      "hashPath": "asp.versioning.mvc.10.2.1.nupkg.sha512"
+    },
+    "Asp.Versioning.Mvc.ApiExplorer/10.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Tv1megkpUy+3FN9yfVJKIcYMLXTe5CPs4zftBxGaZhADJe6h9CJZ2Okh5cG4PoE7wzHTef+AK++8IuZta3Ppog==",
+      "path": "asp.versioning.mvc.apiexplorer/10.2.1",
+      "hashPath": "asp.versioning.mvc.apiexplorer.10.2.1.nupkg.sha512"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
     },
     "FluentValidation/12.1.1": {
       "type": "package",

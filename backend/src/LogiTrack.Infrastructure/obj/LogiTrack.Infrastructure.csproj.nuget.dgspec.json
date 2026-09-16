@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj",
         "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Application\\obj\\",
+=======
+    "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj",
+        "projectName": "LogiTrack.Application",
+        "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj",
+        "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Application\\obj\\",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -27,8 +41,13 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj": {
                 "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj"
+=======
+              "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj": {
+                "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
               }
             }
           }
@@ -361,6 +380,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -369,6 +389,16 @@
         "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
         "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\obj\\",
+=======
+    "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
+        "projectName": "LogiTrack.Domain",
+        "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
+        "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\obj\\",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -696,6 +726,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -704,6 +735,16 @@
         "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Infrastructure\\obj\\",
+=======
+    "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj",
+        "projectName": "LogiTrack.Infrastructure",
+        "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Infrastructure\\obj\\",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -719,11 +760,19 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj": {
                 "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj"
               },
               "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj": {
                 "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj"
+=======
+              "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj": {
+                "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj"
+              },
+              "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj": {
+                "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
               }
             }
           }

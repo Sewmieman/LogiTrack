@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "S00l7JX6zRA=",
   "success": true,
   "projectFilePath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
+=======
+  "dgSpecHash": "O062UM5oHmw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
   "expectedPackageFiles": [],
   "logs": []
 }

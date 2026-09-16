@@ -11,10 +11,14 @@ import { Deliveries } from './pages/deliveries/deliveries';
 import { Payments } from './pages/payments/payments';
 import { Vehicles } from './pages/vehicles/vehicles';
 
+<<<<<<< HEAD
 import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
 
+=======
+export const routes: Routes = [
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
   {
     path: '',
     redirectTo: 'login',
@@ -34,7 +38,10 @@ export const routes: Routes = [
   {
     path: '',
     component: Layout,
+<<<<<<< HEAD
     canActivate: [authGuard],
+=======
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
     children: [
       {
         path: 'dashboard',

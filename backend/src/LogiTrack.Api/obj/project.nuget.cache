@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "Te2qXwWHRBY=",
   "success": true,
   "projectFilePath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
@@ -8,6 +9,16 @@
     "C:\\Users\\student\\.nuget\\packages\\asp.versioning.http\\10.0.0\\asp.versioning.http.10.0.0.nupkg.sha512",
     "C:\\Users\\student\\.nuget\\packages\\asp.versioning.mvc\\10.0.0\\asp.versioning.mvc.10.0.0.nupkg.sha512",
     "C:\\Users\\student\\.nuget\\packages\\asp.versioning.mvc.apiexplorer\\10.0.0\\asp.versioning.mvc.apiexplorer.10.0.0.nupkg.sha512",
+=======
+  "dgSpecHash": "vErSdxKXKJ4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\student\\.nuget\\packages\\asp.versioning.abstractions\\10.2.1\\asp.versioning.abstractions.10.2.1.nupkg.sha512",
+    "C:\\Users\\student\\.nuget\\packages\\asp.versioning.http\\10.2.1\\asp.versioning.http.10.2.1.nupkg.sha512",
+    "C:\\Users\\student\\.nuget\\packages\\asp.versioning.mvc\\10.2.1\\asp.versioning.mvc.10.2.1.nupkg.sha512",
+    "C:\\Users\\student\\.nuget\\packages\\asp.versioning.mvc.apiexplorer\\10.2.1\\asp.versioning.mvc.apiexplorer.10.2.1.nupkg.sha512",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
     "C:\\Users\\student\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\student\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "C:\\Users\\student\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -57,9 +68,15 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+<<<<<<< HEAD
       "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
       "warningLevel": 1,
       "filePath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
+=======
+      "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"

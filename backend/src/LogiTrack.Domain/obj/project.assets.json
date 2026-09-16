@@ -13,11 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
       "projectName": "LogiTrack.Domain",
       "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
       "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Domain\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
+      "projectName": "LogiTrack.Domain",
+      "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\LogiTrack.Domain.csproj",
+      "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Domain\\obj\\",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config"

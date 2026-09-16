@@ -2,7 +2,11 @@
   "version": 4,
   "targets": {
     "net10.0": {
+<<<<<<< HEAD
       "Asp.Versioning.Abstractions/10.0.0": {
+=======
+      "Asp.Versioning.Abstractions/10.2.1": {
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         "type": "package",
         "compile": {
           "lib/net10.0/Asp.Versioning.Abstractions.dll": {
@@ -13,12 +17,24 @@
           "lib/net10.0/Asp.Versioning.Abstractions.dll": {
             "related": ".xml"
           }
+<<<<<<< HEAD
         }
       },
       "Asp.Versioning.Http/10.0.0": {
         "type": "package",
         "dependencies": {
           "Asp.Versioning.Abstractions": "10.0.0"
+=======
+        },
+        "build": {
+          "buildTransitive/Asp.Versioning.Abstractions.targets": {}
+        }
+      },
+      "Asp.Versioning.Http/10.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Asp.Versioning.Abstractions": "10.2.1"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         },
         "compile": {
           "lib/net10.0/Asp.Versioning.Http.dll": {
@@ -32,12 +48,24 @@
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
+<<<<<<< HEAD
         ]
       },
       "Asp.Versioning.Mvc/10.0.0": {
         "type": "package",
         "dependencies": {
           "Asp.Versioning.Http": "10.0.0"
+=======
+        ],
+        "build": {
+          "buildTransitive/Asp.Versioning.Http.targets": {}
+        }
+      },
+      "Asp.Versioning.Mvc/10.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Asp.Versioning.Http": "10.2.1"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         },
         "compile": {
           "lib/net10.0/Asp.Versioning.Mvc.dll": {
@@ -50,10 +78,17 @@
           }
         }
       },
+<<<<<<< HEAD
       "Asp.Versioning.Mvc.ApiExplorer/10.0.0": {
         "type": "package",
         "dependencies": {
           "Asp.Versioning.Mvc": "10.0.0"
+=======
+      "Asp.Versioning.Mvc.ApiExplorer/10.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Asp.Versioning.Mvc": "10.2.1"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         },
         "compile": {
           "lib/net10.0/Asp.Versioning.Mvc.ApiExplorer.dll": {
@@ -1020,17 +1055,31 @@
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "Asp.Versioning.Abstractions/10.0.0": {
       "sha512": "cMRE5nvNMfBgfkb0XFWst/7UtyXCjoAXnV0L4Scx4P9fcf0idgrj1Z0c+3ylsy01K4cOib7dKhCBfpg5z3r0Kg==",
       "type": "package",
       "path": "asp.versioning.abstractions/10.0.0",
+=======
+    "Asp.Versioning.Abstractions/10.2.1": {
+      "sha512": "jMBztsVim+rYVrkNY23dMuOjTGXGQ9+je1xb3i17KgUof7OcBZtMMDduEWoCQ52SpTlYqKsuzgJyUMCMOFCBfg==",
+      "type": "package",
+      "path": "asp.versioning.abstractions/10.2.1",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "README.md",
+<<<<<<< HEAD
         "asp.versioning.abstractions.10.0.0.nupkg.sha512",
         "asp.versioning.abstractions.nuspec",
+=======
+        "analyzers/dotnet/cs/Asp.Versioning.Analyzers.dll",
+        "asp.versioning.abstractions.10.2.1.nupkg.sha512",
+        "asp.versioning.abstractions.nuspec",
+        "buildTransitive/Asp.Versioning.Abstractions.targets",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         "icon.png",
         "lib/net10.0/Asp.Versioning.Abstractions.dll",
         "lib/net10.0/Asp.Versioning.Abstractions.xml",
@@ -1040,48 +1089,84 @@
         "lib/netstandard2.0/Asp.Versioning.Abstractions.xml"
       ]
     },
+<<<<<<< HEAD
     "Asp.Versioning.Http/10.0.0": {
       "sha512": "xmNm9FM2d20NKy7i1osEQysf7pJ4iJjWnM6e8CoeIhUREqG8nugsfC82pGpmzlatjAJL5T52ieSpyW+GFdSsSQ==",
       "type": "package",
       "path": "asp.versioning.http/10.0.0",
+=======
+    "Asp.Versioning.Http/10.2.1": {
+      "sha512": "XaVOKS4AV6a6JdFsiuyLkNwU0ilWhUK2U71mBEXJsgi5AGpo24UkfZ4KUhpRGpuMmQNrugS7yxCIscGcnujdFA==",
+      "type": "package",
+      "path": "asp.versioning.http/10.2.1",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "README.md",
+<<<<<<< HEAD
         "asp.versioning.http.10.0.0.nupkg.sha512",
         "asp.versioning.http.nuspec",
+=======
+        "analyzers/dotnet/cs/Asp.Versioning.Api.Analyzers.dll",
+        "asp.versioning.http.10.2.1.nupkg.sha512",
+        "asp.versioning.http.nuspec",
+        "buildTransitive/Asp.Versioning.Http.targets",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         "icon.png",
         "lib/net10.0/Asp.Versioning.Http.dll",
         "lib/net10.0/Asp.Versioning.Http.xml"
       ]
     },
+<<<<<<< HEAD
     "Asp.Versioning.Mvc/10.0.0": {
       "sha512": "W0wZ+0uZ0UK4KstjvEkNBZ0xxhBmxunwNg8582SVyyW7txQmSXibtm8fC4o82LaemPquYskms67bIbJOSrnlug==",
       "type": "package",
       "path": "asp.versioning.mvc/10.0.0",
+=======
+    "Asp.Versioning.Mvc/10.2.1": {
+      "sha512": "fMzUraYZOAobKQn2PffrgPsULbCWFeWroYRYndPasxPsiQl1+i8x5qYRuMYZAbzDrBnymPUMBxT2gZG2PwbkcQ==",
+      "type": "package",
+      "path": "asp.versioning.mvc/10.2.1",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "README.md",
+<<<<<<< HEAD
         "asp.versioning.mvc.10.0.0.nupkg.sha512",
+=======
+        "asp.versioning.mvc.10.2.1.nupkg.sha512",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         "asp.versioning.mvc.nuspec",
         "icon.png",
         "lib/net10.0/Asp.Versioning.Mvc.dll",
         "lib/net10.0/Asp.Versioning.Mvc.xml"
       ]
     },
+<<<<<<< HEAD
     "Asp.Versioning.Mvc.ApiExplorer/10.0.0": {
       "sha512": "H54UOpRoc4RmhQ4RA2lzDz43a/hAu/JN19Yyy/DNmH4XlRxhemfhifJyh9BaXNJOtGa2Dnu2xEeP4VSiTdUdAg==",
       "type": "package",
       "path": "asp.versioning.mvc.apiexplorer/10.0.0",
+=======
+    "Asp.Versioning.Mvc.ApiExplorer/10.2.1": {
+      "sha512": "Tv1megkpUy+3FN9yfVJKIcYMLXTe5CPs4zftBxGaZhADJe6h9CJZ2Okh5cG4PoE7wzHTef+AK++8IuZta3Ppog==",
+      "type": "package",
+      "path": "asp.versioning.mvc.apiexplorer/10.2.1",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "README.md",
+<<<<<<< HEAD
         "asp.versioning.mvc.apiexplorer.10.0.0.nupkg.sha512",
+=======
+        "asp.versioning.mvc.apiexplorer.10.2.1.nupkg.sha512",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
         "asp.versioning.mvc.apiexplorer.nuspec",
         "icon.png",
         "lib/net10.0/Asp.Versioning.Mvc.ApiExplorer.dll",
@@ -2963,8 +3048,13 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+<<<<<<< HEAD
       "Asp.Versioning.Mvc >= 10.0.0",
       "Asp.Versioning.Mvc.ApiExplorer >= 10.0.0",
+=======
+      "Asp.Versioning.Mvc >= 10.2.1",
+      "Asp.Versioning.Mvc.ApiExplorer >= 10.2.1",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
       "FluentValidation.DependencyInjectionExtensions >= 12.1.1",
       "LogiTrack.Application >= 1.0.0",
       "LogiTrack.Infrastructure >= 1.0.0",
@@ -2980,11 +3070,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
       "projectName": "LogiTrack.Api",
       "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
       "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\logitrack.api\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
+      "projectName": "LogiTrack.Api",
+      "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\logitrack.api\\LogiTrack.Api.csproj",
+      "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\logitrack.api\\obj\\",
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3000,11 +3098,19 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj": {
               "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj"
             },
             "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\Logistics and Delivery\\LogiTrack\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj"
+=======
+            "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj": {
+              "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Application\\LogiTrack.Application.csproj"
+            },
+            "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\student\\Desktop\\MyTraining\\LogiTrack_Full_Backend_Frontend\\LogiTrack_Full\\backend\\src\\LogiTrack.Infrastructure\\LogiTrack.Infrastructure.csproj"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
             }
           }
         }
@@ -3028,11 +3134,19 @@
         "dependencies": {
           "Asp.Versioning.Mvc": {
             "target": "Package",
+<<<<<<< HEAD
             "version": "[10.0.0, )"
           },
           "Asp.Versioning.Mvc.ApiExplorer": {
             "target": "Package",
             "version": "[10.0.0, )"
+=======
+            "version": "[10.2.1, )"
+          },
+          "Asp.Versioning.Mvc.ApiExplorer": {
+            "target": "Package",
+            "version": "[10.2.1, )"
+>>>>>>> 592b43e4cecbcc7d3b7f7dd849a7a59b40749c97
           },
           "FluentValidation.DependencyInjectionExtensions": {
             "target": "Package",
